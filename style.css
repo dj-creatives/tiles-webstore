@@ -15,7 +15,7 @@ body {
 header {
   text-align: center;
   padding: 1.5rem;
-  background: #222;
+  background: #4b0082;
   color: #fff;
 }
 header h1 {
@@ -181,3 +181,4 @@ footer {
   background: linear-gradient(135deg, #ff9966, #ff5e62);
   transform: scale(1.05);
 }
+
