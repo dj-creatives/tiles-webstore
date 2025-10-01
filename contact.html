@@ -23,8 +23,8 @@
   <label for="name">Full Name</label>
   <input type="text" id="name" name="name" required>
 
-  <label for="email">Email Address</label>
-  <input type="email" id="email" name="email" required>
+  <label for="email">Mobile Number</label>
+  <input type="email" id="mobile" name="mobile" required>
 
   <label for="message">Message</label>
   <textarea id="message" name="message" rows="5" required></textarea>
@@ -47,7 +47,7 @@
 
     const formData = {
       name: form.name.value,
-      email: form.email.value,
+      email: form.mobile.value,
       message: form.message.value
     };
 
@@ -56,7 +56,7 @@
       body: JSON.stringify(formData)
     })
     .then(res => {
-      alert("✅ Thank you! Your message has been saved.");
+      alert("✅ Thank you! Your message has been saved and our executive will call you within 24 hours.");
       form.reset();
     })
     .catch(err => {
