@@ -4,7 +4,7 @@ const products = [
     name: "Marble White Tile",
     price: "INR 45 / sq.ft",
     size: "2x2 ft",
-    image: "images/marble.jpg"
+    image: "images/marble-white.jpg"
   },
   {
     name: "Granite Black Tile",
@@ -23,6 +23,18 @@ const products = [
     price: "INR 75 / sq.ft",
     size: "1x8 ft",
     image: "images/wood.jpg"
+  },
+  {
+    name: "Plain Tile",
+    price: "INR 40 / sq.ft",
+    size: "2x2 ft",
+    image: "images/plain-tile.jpg"
+  },
+  {
+    name: "Aqua Tile",
+    price: "INR 45 / sq.ft",
+    size: "2x2 ft",
+    image: "images/Aqua-tile.jpg"
   }
 ];
 
@@ -39,7 +51,7 @@ products.forEach(tile => {
       <h3>${tile.name}</h3>
       <p class="price">${tile.price}</p>
       <p><small>${tile.size}</small></p>
-      <button>Add to Cart</button>
+      <button>Size</button>
     </div>
   `;
 

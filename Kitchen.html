@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen Tiles - Kumaran D-Online Tile Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🍳 Kitchen Tiles</h1>
+    <p>Elegant and durable tiles for your kitchen</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="kitchen.html">Kitchen Tiles</a>
+	  <a href="bathroom.html">Bathroom Tiles</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Kitchen Tiles List -->
+  <main>
+    <div class="product-grid" id="kitchenGrid"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kumaran D-Online Tile Store. All rights reserved.| Developed by DJ Creatives </p>
+  </footer>
+
+  <script>
+    // Kitchen Tile Products
+    const kitchenTiles = [
+      {
+        name: "Classic Beige Kitchen Tile",
+        price: "INR 22 / sq.ft",
+        size: "12x12 in",
+        image: "images/kitchen-beige.jpg"
+      },
+      {
+        name: "Subway White Kitchen Tile",
+        price: "INR 30 / sq.ft",
+        size: "3x12 in",
+        image: "images/kitchen-subway.jpg"
+      },
+      {
+        name: "Patterned Kitchen Tile",
+        price: "INR 35 / sq.ft",
+        size: "8x8 in",
+        image: "images/kitchen-pattern.jpg"
+      }
+    ];
+
+    // Render Kitchen Tiles
+    const kitchenGrid = document.getElementById("kitchenGrid");
+
+    kitchenTiles.forEach(tile => {
+      const card = document.createElement("div");
+      card.classList.add("product-card");
+
+      card.innerHTML = `
+        <img src="${tile.image}" alt="${tile.name}">
+        <div class="product-info">
+          <h3>${tile.name}</h3>
+          <p class="price">${tile.price}</p>
+          <p><small>${tile.size}</small></p>
+          <button>Size</button>
+        </div>
+      `;
+
+      kitchenGrid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

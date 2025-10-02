@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bathroom Tiles - Kumaran D-Online Tile Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🚿 Bathroom Tiles</h1>
+    <p>Find stylish tiles designed for your bathroom</p>
+    <nav>
+      <a href="index.html">Home</a>
+	  <a href="kitchen.html">Kitchen Tiles</a>
+      <a href="bathroom.html">Bathroom Tiles</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Bathroom Tiles List -->
+  <main>
+    <div class="product-grid" id="bathroomGrid"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kumaran D-Online Tile Store. All rights reserved.| Developed by DJ Creatives </p>
+  </footer>
+
+  <script>
+    // Bathroom Tile Products
+    const bathroomTiles = [
+      {
+        name: "White & Black Bathroom Tile",
+        price: "INR 30 / sq.ft",
+        size: "12x12 in",
+        image: "images/bathroom-black&White.jpg"
+      },
+      {
+        name: "Ocean Blue Bathroom Tile",
+        price: "INR 32 / sq.ft",
+        size: "12x24 in",
+        image: "images/bathroom-blue.jpg"
+      },
+      {
+        name: "Textured Grey Bathroom Tile",
+        price: "INR 34 / sq.ft",
+        size: "18x18 in",
+        image: "images/bathroom-grey.jpg"
+      }
+    ];
+
+    // Render Bathroom Tiles
+    const bathroomGrid = document.getElementById("bathroomGrid");
+
+    bathroomTiles.forEach(tile => {
+      const card = document.createElement("div");
+      card.classList.add("product-card");
+
+      card.innerHTML = `
+        <img src="${tile.image}" alt="${tile.name}">
+        <div class="product-info">
+          <h3>${tile.name}</h3>
+          <p class="price">${tile.price}</p>
+          <p><small>${tile.size}</small></p>
+          <button>Size</button>
+        </div>
+      `;
+
+      bathroomGrid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
