@@ -57,4 +57,3 @@ products.forEach(tile => {
 
   productGrid.appendChild(card);
 });
-
