@@ -34,7 +34,7 @@ const products = [
     name: "Aqua Tile",
     price: "INR 45 / sq.ft",
     size: "2x2 ft",
-    image: "images/Aqua-tile.jpg"
+    image: "images/aqua-tile.jpg"
   }
 ];
 
@@ -57,3 +57,4 @@ products.forEach(tile => {
 
   productGrid.appendChild(card);
 });
+
